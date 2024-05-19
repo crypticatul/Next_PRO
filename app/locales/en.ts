@@ -13,11 +13,11 @@ const en: LocaleType = {
       : "Unauthorized access, please enter access code in [auth](/#/auth) page, or enter your OpenAI API Key.",
   },
   Auth: {
-    Title: "Need Access Code",
-    Tips: "Please enter access code below",
-    SubTips: "Or enter your OpenAI or Google API Key",
-    Input: "access code",
-    Confirm: "Confirm",
+    Title: "Please input the Access Code provided by Cognitiev.com",
+    Tips: "Please input the Access Code below",
+    SubTips: "Or input your OpenAI API Key",
+    Input: "Access Code",
+    Confirm: "CONFIRM",
     Later: "Later",
   },
   ChatItem: {
@@ -44,12 +44,10 @@ const en: LocaleType = {
       PinToastAction: "View",
       Delete: "Delete",
       Edit: "Edit",
-      Speech: "Play",
-      StopSpeech: "Stop",
     },
     Commands: {
       new: "Start a new chat",
-      newm: "Start a new chat with mask",
+      newm: "Start a new chat with Mode",
       next: "Next Chat",
       prev: "Previous Chat",
       clear: "Clear Context",
@@ -64,13 +62,11 @@ const en: LocaleType = {
         dark: "Dark Theme",
       },
       Prompt: "Prompts",
-      Masks: "Masks",
+      Masks: "Modes",
       Clear: "Clear Context",
       Settings: "Settings",
       EnablePlugins: "Enable Plugins",
       DisablePlugins: "Disable Plugins",
-      UploadImage: "Upload Images",
-      UploadFle: "Upload Files",
     },
     Rename: "Rename Chat",
     Typing: "Typing…",
@@ -82,11 +78,9 @@ const en: LocaleType = {
       return inputHints + ", / to search prompts, : to use commands";
     },
     Send: "Send",
-    StartSpeak: "Talk",
-    StopSpeak: "Stop",
     Config: {
       Reset: "Reset to Default",
-      SaveAs: "Save as Mask",
+      SaveAs: "Save as a Mode",
     },
     IsContext: "Contextual Prompt",
   },
@@ -95,7 +89,7 @@ const en: LocaleType = {
     Copy: "Copy All",
     Download: "Download",
     MessageFromYou: "Message From You",
-    MessageFromChatGPT: "Message From ChatGPT",
+    MessageFromChatGPT: "Message From Cognitiev PRO",
     Share: "Share to ShareGPT",
     Format: {
       Title: "Export Format",
@@ -103,7 +97,7 @@ const en: LocaleType = {
     },
     IncludeContext: {
       Title: "Including Context",
-      SubTitle: "Export context prompts in mask or not",
+      SubTitle: "Export context prompts in a Mode or not",
     },
     Steps: {
       Select: "Select",
@@ -134,7 +128,6 @@ const en: LocaleType = {
     DeleteChat: "Confirm to delete the selected conversation?",
     DeleteToast: "Chat Deleted",
     Revert: "Revert",
-    Search: "Search Chat",
   },
   Settings: {
     Title: "Settings",
@@ -191,7 +184,7 @@ const en: LocaleType = {
       SubTitle: "Generate a suitable title based on the conversation content",
     },
     Sync: {
-      CloudState: "Last Update",
+      CloudState: "Secured Cloud Sync",
       NotSyncYet: "Not sync yet",
       Success: "Sync Success",
       Fail: "Sync Fail",
@@ -236,12 +229,12 @@ const en: LocaleType = {
     },
     Mask: {
       Splash: {
-        Title: "Mask Splash Screen",
-        SubTitle: "Show a mask splash screen before starting new chat",
+        Title: "Mode Splash Screen",
+        SubTitle: "Show a Mode splash screen before starting new chat",
       },
       Builtin: {
-        Title: "Hide Builtin Masks",
-        SubTitle: "Hide builtin masks in mask list",
+        Title: "Hide Builtin Modes",
+        SubTitle: "Hide builtin Modes in Mode list",
       },
     },
     Prompt: {
@@ -271,7 +264,6 @@ const en: LocaleType = {
       SubTitle:
         "Will compress if uncompressed messages length exceeds the value",
     },
-
     Usage: {
       Title: "Account Balance",
       SubTitle(used: any, total: any) {
@@ -304,7 +296,7 @@ const en: LocaleType = {
 
         Endpoint: {
           Title: "OpenAI Endpoint",
-          SubTitle: "Must start with http(s):// or use /api/openai as default",
+          SubTitle: "Must starts with http(s):// or use /api/openai as default",
         },
       },
       Azure: {
@@ -324,44 +316,9 @@ const en: LocaleType = {
           SubTitle: "Check your api version from azure console",
         },
       },
-      Anthropic: {
-        ApiKey: {
-          Title: "Anthropic API Key",
-          SubTitle:
-            "Use a custom Anthropic Key to bypass password access restrictions",
-          Placeholder: "Anthropic API Key",
-        },
-
-        Endpoint: {
-          Title: "Endpoint Address",
-          SubTitle: "Example:",
-        },
-
-        ApiVerion: {
-          Title: "API Version (claude api version)",
-          SubTitle: "Select and input a specific API version",
-        },
-      },
       CustomModel: {
         Title: "Custom Models",
         SubTitle: "Custom model options, seperated by comma",
-      },
-      Google: {
-        ApiKey: {
-          Title: "API Key",
-          SubTitle: "Obtain your API Key from Google AI",
-          Placeholder: "Enter your Google AI Studio API Key",
-        },
-
-        Endpoint: {
-          Title: "Endpoint Address",
-          SubTitle: "Example:",
-        },
-
-        ApiVersion: {
-          Title: "API Version (specific to gemini-pro)",
-          SubTitle: "Select a specific API version",
-        },
       },
     },
 
@@ -402,36 +359,6 @@ const en: LocaleType = {
         SubTitle: "Return Intermediate Steps",
       },
     },
-    TTS: {
-      Enable: {
-        Title: "Enable TTS",
-        SubTitle: "Enable text-to-speech service based on OpenAI",
-      },
-      Autoplay: {
-        Title: "Enable Autoplay",
-        SubTitle:
-          "Automatically generate speech and play, you need to enable the text-to-speech switch first",
-      },
-      Model: "Model",
-      Voice: {
-        Title: "Voice",
-        SubTitle: "The voice to use when generating the audio",
-      },
-      Speed: {
-        Title: "Speed",
-        SubTitle: "The speed of the generated audio",
-      },
-    },
-    STT: {
-      Enable: {
-        Title: "Enable STT",
-        SubTitle: "Enable Speech-to-Text",
-      },
-      Engine: {
-        Title: "STT Engine",
-        SubTitle: "Text-to-Speech Engine",
-      },
-    },
   },
   Store: {
     DefaultTopic: "New Conversation",
@@ -441,7 +368,7 @@ const en: LocaleType = {
       History: (content: string) =>
         "This is a summary of the chat history as a recap: " + content,
       Topic:
-        "Please generate a four to five word title summarizing our conversation without any lead-in, punctuation, quotation marks, periods, symbols, bold text, or additional text. Remove enclosing quotation marks.",
+        "Please generate a four to five word title summarizing our conversation without any lead-in, punctuation, quotation marks, periods, symbols, or additional text. Remove enclosing quotation marks.",
       Summarize:
         "Summarize the discussion briefly in 200 words or less to use as a prompt for future context.",
     },
@@ -487,11 +414,11 @@ const en: LocaleType = {
     Sysmessage: "You are an assistant that",
   },
   Mask: {
-    Name: "Mask",
+    Name: "Mode",
     Page: {
-      Title: "Prompt Template",
-      SubTitle: (count: number) => `${count} prompt templates`,
-      Search: "Search Templates",
+      Title: "AI Modes",
+      SubTitle: (count: number) => `${count} AI modes`,
+      Search: "Search Modes",
       Create: "Create",
     },
     Item: {
@@ -521,8 +448,8 @@ const en: LocaleType = {
         SubTitle: "Do not show in-context prompts in chat",
       },
       Share: {
-        Title: "Share This Mask",
-        SubTitle: "Generate a link to this mask",
+        Title: "Share This Mode",
+        SubTitle: "Generate a link to this Mode",
         Action: "Copy Link",
       },
     },
@@ -530,9 +457,9 @@ const en: LocaleType = {
   NewChat: {
     Return: "Return",
     Skip: "Just Start",
-    Title: "Pick a Mask",
-    SubTitle: "Chat with the Soul behind the Mask",
-    More: "Find More",
+    Title: "Pick a Mode",
+    SubTitle: "Chat with the Soul behind the Mode",
+    More: "Create New",
     NotShow: "Never Show Again",
     ConfirmNoShow: "Confirm to disable? You can enable it in settings later.",
   },

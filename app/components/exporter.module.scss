@@ -11,7 +11,7 @@
 
 .steps {
   background-color: var(--gray);
-  border-radius: 10px;
+  border-radius: var(--rounded);
   overflow: hidden;
   padding: 5px;
   position: relative;
@@ -35,7 +35,7 @@
       height: 100%;
       background-color: var(--white);
       transition: all ease 0.3s;
-      border-radius: 8px;
+      border-radius: var(--rounded);
     }
   }
 
@@ -55,7 +55,7 @@
       align-items: center;
       justify-content: center;
 
-      $radius: 8px;
+      $radius: 0px;
 
       &-finished {
         opacity: 0.9;
@@ -72,7 +72,7 @@
       .step-index {
         background-color: var(--gray);
         border: var(--border-in-light);
-        border-radius: 6px;
+        border-radius: var(--rounded);
         display: inline-block;
         padding: 0px 5px;
         font-size: 12px;
@@ -94,7 +94,6 @@
 
   button {
     flex-grow: 1;
-
     &:not(:last-child) {
       margin-right: 10px;
     }
@@ -103,7 +102,7 @@
 
 .image-previewer {
   .preview-body {
-    border-radius: 10px;
+    border-radius: var(--rounded);
     padding: 20px;
     box-shadow: var(--card-shadow) inset;
     background-color: var(--gray);
@@ -111,7 +110,7 @@
     .chat-info {
       background-color: var(--second);
       padding: 20px;
-      border-radius: 10px;
+      border-radius: var(--rounded);
       margin-bottom: 20px;
       display: flex;
       justify-content: space-between;
@@ -162,7 +161,7 @@
         font-size: 12px;
         color: var(--primary);
         padding: 2px 15px;
-        border-radius: 10px;
+        border-radius: var(--rounded);
         background-color: var(--white);
         box-shadow: var(--card-shadow);
 
@@ -181,7 +180,7 @@
       }
 
       .body {
-        border-radius: 10px;
+        border-radius: var(--rounded);
         padding: 8px 10px;
         max-width: calc(100% - 104px);
         box-shadow: var(--card-shadow);
@@ -190,59 +189,6 @@
         code,
         pre {
           overflow: hidden;
-        }
-
-        .message-image {
-          width: 100%;
-          margin-top: 10px;
-        }
-
-        .message-images {
-          display: grid;
-          justify-content: left;
-          grid-gap: 10px;
-          grid-template-columns: repeat(var(--image-count), auto);
-          margin-top: 10px;
-        }
-
-        @media screen and (max-width: 600px) {
-          $image-width: calc(calc(100vw/2)/var(--image-count));
-
-          .message-image-multi {
-            width: $image-width;
-            height: $image-width;
-          }
-
-          .message-image {
-            max-width: calc(100vw/3*2);
-          }
-        }
-
-        @media screen and (min-width: 600px) {
-          $max-image-width: calc(900px/3*2/var(--image-count));
-          $image-width: calc(80vw/3*2/var(--image-count));
-
-          .message-image-multi {
-            width: $image-width;
-            height: $image-width;
-            max-width: $max-image-width;
-            max-height: $max-image-width;
-          }
-
-          .message-image {
-            max-width: calc(100vw/3*2);
-          }
-        }
-
-        .message-image-multi {
-          object-fit: cover;
-        }
-
-        .message-image,
-        .message-image-multi {
-          box-sizing: border-box;
-          border-radius: 10px;
-          border: rgba($color: #888, $alpha: 0.2) 1px solid;
         }
       }
 
@@ -267,5 +213,6 @@
     }
   }
 
-  .default-theme {}
+  .default-theme {
+  }
 }

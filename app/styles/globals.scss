@@ -5,38 +5,49 @@
   --theme: light;
 
   /* color */
-  --white: white;
+  --white: rgb(253, 252, 251);
+  --white-gradient:rgb(254, 216, 216);
+  --item-bg: #f1f5f9;
+
+
   --black: rgb(48, 48, 48);
-  --gray: rgb(250, 250, 250);
-  --primary: rgb(29, 147, 171);
+  --gray: rgb(226, 209, 195);
+  --primary: #BA069B;
   --second: rgb(231, 248, 255);
   --hover-color: #f3f3f3;
   --bar-color: rgba(0, 0, 0, 0.1);
-  // --theme-color: #e7f8ff;
-
+  --theme-color: var(--gray);
+  --theme-gradient: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  --box-shadow: 0 25px 40px 0 #ff4e4e88;
   /* shadow */
-  --shadow: 50px 50px 100px 10px rgb(0, 0, 0, 0.1);
+  --shadow: 50px 50px 100px 10px rgba(248, 122, 122, 0.1);
   --card-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.05);
 
   /* stroke */
   --border-in-light: 1px solid rgb(222, 222, 222);
+
 }
 
 @mixin dark {
   --theme: dark;
-
+  --item-bg: rgba(27, 27, 27, 1);
   /* color */
-  --white: rgb(30, 30, 30);
+  --white: rgb(0, 0, 0);
+  --white-gradient:rgb(25, 25, 25);
   --black: rgb(187, 187, 187);
-  --gray: rgb(21, 21, 21);
-  --primary: rgb(29, 147, 171);
-  --second: rgb(27 38 42);
+  --gray: rgba(17, 17, 17, 1);
+  --primary: #BA069B;;
+  --second: rgba(17, 17, 17, 1);
   --hover-color: #323232;
-  --bar-color: rgba(255, 255, 255, 0.1);
-  --border-in-light: 1px solid rgba(255, 255, 255, 0.192);
-  // --theme-color: #1b262a;
+  --theme-gradient: linear-gradient(135deg, rgba(51, 51, 51, 1) 50%, rgba(2, 2, 2, 1) 100%);
 
-  div:not(.no-dark) > svg {
+  --bar-color: rgba(255, 255, 255, 0.1);
+  --box-shadow: 0 15px 50px 0 rgba(226, 254, 1, 0.533);
+  --border-in-light: 1px solid rgba(211, 238, 1, 0.192);
+
+  --theme-color: var(--gray);
+
+  div:not(.no-dark)>svg {
     filter: invert(0.5);
   }
 }
@@ -50,12 +61,13 @@
 }
 
 .mask {
-  filter: invert(0.8);
+  filter: invert(0.5);
 }
 
 :root {
   @include light;
 
+  --rounded: 30px;
   --window-width: 90vw;
   --window-height: 90vh;
   --sidebar-width: 300px;
@@ -92,7 +104,7 @@ html {
 }
 
 body {
-  background-color: var(--gray);
+  background: var(--theme-gradient);
   color: var(--black);
   margin: 0;
   padding: 0;
@@ -107,10 +119,6 @@ body {
 
   @media only screen and (max-width: 600px) {
     background-color: var(--second);
-  }
-
-  *:focus-visible {
-    outline: none;
   }
 }
 
@@ -146,7 +154,7 @@ label {
   cursor: pointer;
 }
 
-input {
+input:not(.cl-formFieldInput) {
   text-align: center;
   font-family: inherit;
 }
@@ -221,9 +229,9 @@ input[type="range"]::-ms-thumb:hover {
   @include thumbHover();
 }
 
-input[type="number"],
-input[type="text"],
-input[type="password"] {
+input[type="number"]:not(.cl-formFieldInput),
+input[type="text"]:not(.cl-formFieldInput),
+input[type="password"]:not(.cl-formFieldInput) {
   appearance: none;
   border-radius: 10px;
   border: var(--border-in-light);
@@ -307,6 +315,7 @@ pre {
   &:hover {
     filter: brightness(0.9);
   }
+
   &:focus {
     filter: brightness(0.95);
   }
@@ -341,20 +350,27 @@ pre {
   }
 }
 
+//🚀 This Code is made possible by Cognitiev.com 🧠
 .user-avatar {
-  height: 30px;
-  min-height: 30px;
-  width: 30px;
-  min-width: 30px;
+  height: 90px;
+  min-height: 90px;
+  width: 90px;
+  min-width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: var(--border-in-light);
   box-shadow: var(--card-shadow);
-  border-radius: 11px;
+  border-radius: 60px;
+  outline-color: var(--bar-color);
+  outline-style: solid;
+  outline-offset: 3px;
+  outline-width: 1px;
+  overflow: hidden;
 }
 
 .one-line {
+  margin-top: 45px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -362,4 +378,8 @@ pre {
 
 .copyable {
   user-select: text;
+}
+
+.icon-sm {
+  padding: 5px 15px !important;
 }

@@ -1,3 +1,4 @@
+// 🚀 Made Possible by Cognitiev.com 🧠
 @import "../styles/animation.scss";
 
 .new-chat {
@@ -12,39 +13,46 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px;
+    padding: 6px; // 60% of original size
     box-sizing: border-box;
     animation: slide-in-from-top ease 0.3s;
   }
 
   .mask-cards {
     display: flex;
-    margin-top: 5vh;
-    margin-bottom: 20px;
+    margin-top: 3vh; // 60% of original size
+    margin-bottom: 12px; // 60% of original size
     animation: slide-in ease 0.3s;
 
     .mask-card {
-      padding: 20px 10px;
+      padding: 12px 6px; // 60% of original size
+      max-height: 60%; // 60% of original size
       border: var(--border-in-light);
       box-shadow: var(--card-shadow);
-      border-radius: 14px;
+      border-radius: var(--rounded);
       background-color: var(--white);
-      transform: scale(1);
+      transform: scale(0.6); // 60% of original size
+      transition: all 0.3s ease;
 
       &:first-child {
-        transform: rotate(-15deg) translateY(5px);
+        transform: scale(0.6) rotate(0deg) translateY(7.2px); // 60% of original size
       }
 
       &:last-child {
-        transform: rotate(15deg) translateY(5px);
+        transform: scale(0.6) rotate(0deg) translateY(7.2px); // 60% of original size
+      }
+
+      &:hover {
+        transform: scale(0.654); // 60% of original size
+        border-color: var(--black);
       }
     }
   }
 
   .title {
-    font-size: 32px;
+    font-size: 26px; // 60% of original size
     font-weight: bolder;
-    margin-bottom: 1vh;
+    margin-bottom: 0.6vh; // 60% of original size
     animation: slide-in ease 0.35s;
   }
 
@@ -53,15 +61,15 @@
   }
 
   .actions {
-    margin-top: 5vh;
-    margin-bottom: 2vh;
+    margin-top: 3vh; // 60% of original size
+    margin-bottom: 1.2vh; // 60% of original size
     animation: slide-in ease 0.45s;
     display: flex;
     justify-content: center;
-    font-size: 12px;
+    font-size: 7.2px; // 60% of original size
 
     .skip {
-      margin-left: 10px;
+      margin-left: 6px; // 60% of original size
     }
   }
 
@@ -70,54 +78,87 @@
     width: 100%;
     overflow: auto;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 12px; // 60% of original size
 
-    $linear: linear-gradient(
-      to bottom,
+    $linear: linear-gradient(to bottom,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0)
-    );
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0));
 
     -webkit-mask-image: $linear;
     mask-image: $linear;
 
     animation: slide-in ease 0.5s;
 
+    // 🚀Made Possible by Cognitiev.com 🧠
+
     .mask-row {
       display: flex;
-      // justify-content: center;
-      margin-bottom: 10px;
-
-      @for $i from 1 to 10 {
-        &:nth-child(#{$i * 2}) {
-          margin-left: 50px;
-        }
-      }
+      justify-content: center;
 
       .mask {
+        user-select: none;
+        max-width: 132px; // 60% of original size
+        min-width: 132px; // 60% of original size
+        min-height: 165px; // 60% of original size
+        max-height: 165px; // 60% of the original size - new line
+        padding: 36px 10px 18px; // 60% of original size
+        overflow: auto; // new line
+
         display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 10px 14px;
-        border: var(--border-in-light);
-        box-shadow: var(--card-shadow);
-        background-color: var(--white);
-        border-radius: 10px;
-        margin-right: 10px;
-        max-width: 8em;
-        transform: scale(1);
         cursor: pointer;
-        transition: all ease 0.3s;
+
+        margin: 1.8em auto; // 60% of original size
+        border: 1px solid #ffffff22;
+
+        background: linear-gradient(0deg, var(--white) 0%,var(--white-gradient) 100%);
+        border-radius: 1rem;
+
+        backdrop-filter: blur(7px);
+
+        -webkit-backdrop-filter: blur(7px);
+
+        overflow: hidden;
+
+        transition: .5s all;
+
+        ::before {
+          position: fixed;
+          content: "";
+          box-shadow: 0 0 60px 24px #ffffff08; // 60% of original size
+          top: -10%;
+          left: -100%;
+          transform: rotate(-45deg);
+          height: 39rem; // 60% of original size
+          transition: .7s all;
+        }
 
         &:hover {
-          transform: translateY(-5px) scale(1.1);
-          z-index: 999;
-          border-color: var(--primary);
+          border: 1px solid #ffffff44;
+          box-shadow: var(--box-shadow);
+          transform: scale(1.025);
+          filter: brightness(1.5);
+
+          ::before {
+            filter: brightness(.5);
+            top: -100%;
+            left: 200%;
+          }
         }
 
         .mask-name {
-          margin-left: 10px;
-          font-size: 14px;
+          font-size: 12px; // 60% of original size
+          color: var(--black);
+          font-weight: bold; // This makes the font bold
+          margin-bottom: 15px; // Add this line, adjust as needed
+          // 🚀Made Possible by Cognitiev.com 🧠
         }
       }
     }

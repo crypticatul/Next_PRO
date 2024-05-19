@@ -1,0 +1,12 @@
+@import "../styles/animation.scss";
+// faq.module.scss
+.faq-container {
+    padding: 20px;
+    height: 100vh; // Set the height to the full viewport height
+    overflow-y: auto; // Add a vertical scrollbar when the content overflows
+  }
+  
+  .faq-content {
+    animation: slide-in 0.3s ease-out; // Apply the slide-in animation
+  }
+  

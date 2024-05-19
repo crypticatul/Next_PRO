@@ -1,0 +1,181 @@
+.userButton {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    user-select: none;
+    cursor: pointer;
+    background-color: unset;
+    color: currentcolor;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 100ms;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1;
+    min-height: unset;
+    letter-spacing: 0.5px;
+    height: unset;
+    width: unset;
+    --accentLightest: hsla(227, 87%, 59%, 0.3);
+    --accentLighter: hsla(227, 87%, 50%, 0.3);
+    --accent: #103FEF;
+    --accentDark: #0D33BF;
+    --accentDarker: #0A268F;
+    border-radius: 50%;
+    -webkit-font-smoothing: auto !important;
+}
+
+.userButtonDiv, .userDetailDiv {
+    box-sizing: inherit;
+    display: flex;
+    flex-flow: row;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+
+    background-color: rgba(0, 0, 0, 0.24);
+    background-clip: padding-box;
+    position: relative;
+    box-shadow: var(--cl-shimmer-hover-shadow);
+    transition: box-shadow 280ms ease-out 0s;
+}
+
+.userButtonDiv {
+    width: 2rem;
+    height: 2rem;
+}
+
+.userDetailDiv {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+
+
+.img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.dropContent {
+    box-sizing: inherit;
+    display: flex;
+    flex-flow: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    will-change: transform, opacity, height;
+    border-radius: 1rem;
+    background-color: rgb(25, 25, 26);
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 200ms;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 24px 48px;
+    border: 1px solid transparent;
+    padding: 1.5rem 0px;
+    width: 23.5rem;
+    max-width: calc(100vw - 2rem);
+    z-index: 10000;
+    animation: 140ms ease 0s 1 normal none running animation-f2u89x;
+
+
+}
+
+@keyframes animation-f2u89x {
+    0% {
+        opacity: 0;
+        transform: scaleY(1) translateY(-6px);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1) translateY(0px);
+    }
+
+}
+
+.drop-label {
+    padding: 0rem 1.5rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.buttonStyle {
+    margin: 0px;
+    border: 0px;
+    text-decoration: none;;
+    outline: 0px;
+    user-select: none;
+    cursor: pointer;
+    background-color: unset;
+    color: var(--accent);
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 100ms;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    line-height: 1.25;
+    // min-height: 2.25rem;
+    letter-spacing: 0.5px;
+    --border: hsla(0, 0%, 100%, 0.08);
+    --accentLightest: hsla(0, 0%, 100%, 0.04);
+    --accentLighter: hsla(0, 0%, 100%, 0.16);
+    --accent: hsla(0, 0%, 100%, 1);
+    --accentDark: hsla(0, 0%, 100%, 0.48);
+    --accentDarker: hsla(0, 0%, 100%, 0.64);
+    flex: 1 1 0%;
+    border-radius: var(--rounded);
+    gap: 1rem;
+    padding: 0.875rem 1.5rem;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-font-smoothing: auto !important;
+    color: rgba(255, 255, 255, 0.65);
+
+    &:hover {
+        background-color: var(--accentLightest);
+
+    }
+}
+
+.userDetail {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.userDetailContainer {
+    display: flex;
+    flex-flow: column;
+}
+
+.userName {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    color: white;
+}
+
+.userUserName {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+    color: var(--accent);
+
+}
