@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import styles from "./home.module.scss";
-
+import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
 import DeleteIcon from "../icons/delete.svg";
 import DragIcon from "../icons/drag.svg";
@@ -27,7 +27,7 @@ import dynamic from "next/dynamic";
 import { Link, useNavigate } from "react-router-dom";
 import { isIOS, useMobileScreen } from "../utils";
 import { showConfirm } from "./ui-lib";
-import { UserButton } from "./user-button";
+//import { UserButton } from "./user-button";
 const ChatList = dynamic(
   () => import("./chat-list").then((mod) => mod.ChatList),
   {
@@ -167,8 +167,8 @@ export function SideBar(props: { className?: string }) {
             Your Ultimate AI Sidekick!
           </div>
         </div>
-        <div>
-          <UserButton />
+        <div className={styles["sidebar-logo"] + " no-dark"}>
+          <ChatGptIcon />
         </div>
       </div>
 
