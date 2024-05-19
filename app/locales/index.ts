@@ -100,6 +100,14 @@ function getLanguage() {
   }
 }
 
+export function getSTTLang(): string {
+  try {
+    return STT_LANG_MAP[getLang()];
+  } catch {
+    return DEFAULT_STT_LANG;
+  }
+}
+
 export function getLang(): Lang {
   const savedLang = getItem(LANG_KEY);
 
